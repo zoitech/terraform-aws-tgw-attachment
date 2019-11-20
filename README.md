@@ -10,6 +10,7 @@ To attach a transit gateway (already existing) from another account, set the fol
 module "tgw_attachment" {
   source                     = "git::https://github.com/zoitech/terraform-aws-tgw-attachment.git"
   region                     = "eu-central-1"
+  share_arn                  = "arn:aws:ram:eu-central-1:123456789123:resource-share/
   transit_gateway_id         = "tgw-12345678912345678"
   tgw_attachment_tag_name    = "company-network"
   vpc_id                     = "vpc-123456ab"
@@ -33,6 +34,7 @@ To reference a tagged version of the repository:
 module "tgw_attachment" {
   source                     = "git::https://github.com/zoitech/terraform-aws-tgw-attachment.git?ref=1.0.1"
   region                     = "eu-central-1"
+  share_arn                  = "arn:aws:ram:eu-central-1:123456789123:resource-share/7ab74438-4ac2-0780-745d-1bf765ab5d7c"
   transit_gateway_id         = "tgw-12345678912345678"
   tgw_attachment_tag_name    = "company-network"
   vpc_id                     = "vpc-123456ab"
