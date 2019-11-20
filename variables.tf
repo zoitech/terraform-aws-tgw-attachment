@@ -18,6 +18,11 @@ variable "tgw_attachment_tag_name" {
   default     = null
 }
 
+variable "share_arn" {
+  description = "The resource access manager share ARN which contains the transit gateway resource"
+  default     = null
+}
+
 variable "transit_gateway_id" {
   description = "The ID of the transit gateway to attach to the VPC"
   default     = null
