@@ -47,3 +47,41 @@ This module is maintained by [Zoi](https://github.com/zoitech).
 
 # License
 Licensed under the MIT License. Have a look at the file `LICENSE` for more information.
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_ec2_transit_gateway_vpc_attachment.tgw_vpc_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ec2_transit_gateway_vpc_attachment) | resource |
+| [aws_route.rt_private_transit_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | The AWS region to deploy in | `string` | `"eu-central-1"` | no |
+| <a name="input_route_table_id"></a> [route\_table\_id](#input\_route\_table\_id) | The private route table ID where the route for the transit gateway should be added | `any` | `null` | no |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | List of subnet IDs which should be able to transverse the transit gateway | `list(string)` | `null` | no |
+| <a name="input_tgw_attachment_tag_name"></a> [tgw\_attachment\_tag\_name](#input\_tgw\_attachment\_tag\_name) | The name tag for the attached transit gateway | `any` | `null` | no |
+| <a name="input_tgw_destination_cidr_block"></a> [tgw\_destination\_cidr\_block](#input\_tgw\_destination\_cidr\_block) | The destination traffic to match and route via the transit gateway | `any` | `null` | no |
+| <a name="input_transit_gateway_id"></a> [transit\_gateway\_id](#input\_transit\_gateway\_id) | The ID of the transit gateway to attach to the VPC | `any` | `null` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The VPC ID to attach the transit gateway too | `any` | `null` | no |
+
+## Outputs
+
+No outputs.
