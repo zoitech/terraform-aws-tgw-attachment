@@ -30,6 +30,6 @@ variable "vpc_id" {
 
 variable "subnet_ids" {
   description = "List of subnet IDs which should be able to transverse the transit gateway"
-  type        = "list"
+  type        = list(string)
   default     = null
 }
